@@ -5,6 +5,8 @@ on:
     types: [opened, edited, synchronize, reopened]
   push:
     branches: [main]
+  # Permite lanzar el CI a mano desde la pestaña Actions, en cualquier rama.
+  workflow_dispatch:
 
 # Permisos mínimos: cada job pide solo lo que necesita.
 permissions: {}
