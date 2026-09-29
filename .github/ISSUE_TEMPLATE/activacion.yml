@@ -1,0 +1,59 @@
+name: La skill no se activa (o se activa cuando no debe)
+description: Problemas de activación o de comportamiento de los modos
+title: "Activación: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cuéntanos qué esperabas y qué pasó. **No pegues conversaciones reales ni datos personales**: usa un mensaje inventado.
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Qué pasó
+      options:
+        - No se activó y debía
+        - Se activó y no debía
+        - Un modo o comando no funciona
+        - El bloque aparece en un mensaje donde debía omitirse
+        - El bloque molesta o es demasiado largo
+    validations:
+      required: true
+  - type: textarea
+    id: mensaje
+    attributes:
+      label: Mensaje de ejemplo
+      description: Lo que escribiste (inventado o anonimizado).
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Qué esperabas y qué obtuviste
+    validations:
+      required: true
+  - type: dropdown
+    id: capa
+    attributes:
+      label: Qué capa usabas
+      options:
+        - Instrucciones para Claude (capa 1)
+        - Skill (capa 2)
+        - Las dos
+        - No lo sé
+    validations:
+      required: true
+  - type: input
+    id: plataforma
+    attributes:
+      label: Plataforma y plan
+      placeholder: "web / escritorio / móvil / Claude Code · Free / Pro"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacidad
+    attributes:
+      label: Privacidad
+      options:
+        - label: No he pegado conversaciones reales ni datos personales.
+          required: true

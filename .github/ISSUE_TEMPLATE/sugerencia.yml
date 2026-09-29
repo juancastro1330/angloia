@@ -1,0 +1,31 @@
+name: Sugerencia
+description: Una idea para mejorar Profe Inglés
+title: "Idea: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Qué propones
+      description: Una función, un modo, un falso amigo nuevo, una mejora de la documentación…
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Qué problema resuelve
+      description: ¿Qué te falta o qué te molesta hoy?
+    validations:
+      required: true
+  - type: textarea
+    id: ejemplo
+    attributes:
+      label: Un ejemplo inventado
+      description: Cómo se vería en un chat. No pegues conversaciones reales.
+  - type: checkboxes
+    id: privacidad
+    attributes:
+      label: Privacidad
+      options:
+        - label: No he pegado conversaciones reales ni datos personales.
+          required: true
