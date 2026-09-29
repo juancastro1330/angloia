@@ -46,8 +46,18 @@ class RepoCase(unittest.TestCase):
 
     # Ayudas -----------------------------------------------------------------
     def edit(self, rel: Path | str, fn) -> None:
+        """Modifica un archivo de la copia. Falla si la modificación no cambia nada:
+        una prueba que no rompe nada no prueba nada."""
         path = self.root / rel
-        path.write_text(fn(path.read_text(encoding="utf-8")), encoding="utf-8")
+        before = path.read_text(encoding="utf-8")
+        after = fn(before)
+        self.assertNotEqual(after, before, f"La modificación no cambió {rel}: la prueba no comprueba nada")
+        path.write_text(after, encoding="utf-8")
+
+    def current_version(self) -> str:
+        """Versión actual del plugin. Cambia con cada release, así que no se escribe a mano."""
+        path = self.root / validate.PLUGIN_REL / ".claude-plugin" / "plugin.json"
+        return json.loads(path.read_text(encoding="utf-8"))["version"]
 
     def failing(self) -> dict[str, list[str]]:
         return {name: errs for name, errs in validate.run(self.root).items() if errs}
@@ -157,7 +167,7 @@ class TestManifests(RepoCase):
     def test_versiones_distintas(self) -> None:
         self.edit(
             validate.PLUGIN_REL / ".claude-plugin" / "plugin.json",
-            lambda t: t.replace('"version": "0.1.0"', '"version": "0.2.0"'),
+            lambda t: t.replace(f'"version": "{self.current_version()}"', '"version": "99.0.0"'),
         )
         self.assertFailsOnly("manifiestos y versiones", "versiones distintas")
 
@@ -173,8 +183,9 @@ class TestManifests(RepoCase):
         self.assertFailsOnly("manifiestos y versiones", "source")
 
     def test_version_no_semver(self) -> None:
+        version = self.current_version()
         for rel in (validate.PLUGIN_REL / ".claude-plugin" / "plugin.json", ".claude-plugin/marketplace.json", ".release-please-manifest.json"):
-            self.edit(rel, lambda t: t.replace("0.1.0", "uno"))
+            self.edit(rel, lambda t: t.replace(version, "uno"))
         self.assertFailsOnly("manifiestos y versiones", "semver")
 
 
