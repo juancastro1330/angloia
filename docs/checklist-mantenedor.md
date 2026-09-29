@@ -34,7 +34,7 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 
 ## Semana 2: beta
 
-- [ ] **Día 8:** reclutar de 5 a 10 hispanohablantes: varios niveles, planes Free y Pro, al menos la mitad no programadores. Mínimo 5 confirmados.
+- [ ] **Día 8:** reclutar de 5 a 10 hispanohablantes: varios niveles, planes Free y Pro, al menos la mitad no programadores. Mínimo 5 confirmados. Mensajes listos en [`beta/mensaje-reclutamiento.md`](beta/mensaje-reclutamiento.md).
 - [ ] Usar el [kit de beta](beta/guia-beta.md). Comprobar que alguien lo instala sin ayuda.
 - [ ] **Día 3 de la beta:** hacer el check-in («¿lo sigues usando? ¿qué te molesta?»).
 - [ ] Correr los [evals de activación](../evals/activation.md) y los [ejemplos de referencia](../evals/golden-examples.md) en web, escritorio, móvil y Claude Code. Rellenar [`compatibilidad.md`](compatibilidad.md).
@@ -61,7 +61,7 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 - [ ] Settings → General → Social preview: subir `docs/social-preview.png`.
 - [ ] Settings → General → Topics: `claude-skills`, `agent-skills`, `claude-code-plugin`, `english-learning`, `esl`, `spanish-speakers`, `cefr`, `language-learning`.
 - [ ] Activar **Discussions**.
-- [ ] Crear los 10 «good first issues» a partir de [`good-first-issues.md`](good-first-issues.md), con la etiqueta `good first issue`.
+- [x] Crear los 10 «good first issues» a partir de [`good-first-issues.md`](good-first-issues.md), con la etiqueta `good first issue`. Ya están creados (#1 a #10).
 
 **Día 18**
 
@@ -69,7 +69,7 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 - [ ] Comprobar que el Release trae `profe-ingles.zip` y `profe-ingles-plugin.zip`, y que el enlace directo del README funciona.
 - [ ] Enviar el plugin al directorio de Anthropic siguiendo la guía oficial vigente.
 
-**Días 19 a 21: lanzamiento escalonado**
+**Días 19 a 21: lanzamiento escalonado** (mensajes por canal en [`lanzamiento/mensajes.md`](lanzamiento/mensajes.md))
 
 - [ ] 1. Beta testers («Ya salió, compártelo si te sirvió»).
 - [ ] 2. Creadores de inglés y comunidades hispanas (video «Aprende inglés mientras usas Claude»).

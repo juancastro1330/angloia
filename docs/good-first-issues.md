@@ -2,6 +2,8 @@
 
 Diez tareas pequeñas y bien acotadas para quien contribuye por primera vez. El día 16 del plan se crean como issues con la etiqueta `good first issue`; aquí están redactadas para copiarlas tal cual.
 
+**Ya están creados como issues** (29 de septiembre de 2026): [#1](https://github.com/juancastro1330/skill-ingles/issues/1), [#2](https://github.com/juancastro1330/skill-ingles/issues/2), [#3](https://github.com/juancastro1330/skill-ingles/issues/3), [#4](https://github.com/juancastro1330/skill-ingles/issues/4), [#5](https://github.com/juancastro1330/skill-ingles/issues/5), [#6](https://github.com/juancastro1330/skill-ingles/issues/6), [#7](https://github.com/juancastro1330/skill-ingles/issues/7), [#8](https://github.com/juancastro1330/skill-ingles/issues/8), [#9](https://github.com/juancastro1330/skill-ingles/issues/9) y [#10](https://github.com/juancastro1330/skill-ingles/issues/10). Los números siguen el orden de este documento. Si cambias el texto de un borrador, cambia también su issue.
+
 Antes de empezar cualquiera: lee [`CONTRIBUTING.md`](../CONTRIBUTING.md) y corre `python3 scripts/validate.py`.
 
 ---
