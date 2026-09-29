@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Preguntas y conversación
+    url: https://github.com/juancastro1330/skill-ingles/discussions
+    about: Para dudas de uso o ideas abiertas, usa Discussions.
+  - name: Reportar una vulnerabilidad
+    url: https://github.com/juancastro1330/skill-ingles/security/advisories/new
+    about: No abras un issue público para problemas de seguridad; usa el reporte privado.

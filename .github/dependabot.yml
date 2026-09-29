@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Mantiene al día las actions fijadas por SHA (actualiza el SHA y el comentario de versión).
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "ci"
+    labels:
+      - dependencies

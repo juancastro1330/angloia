@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+  push:
+    branches: [main]
+  # Permite lanzar el CI a mano desde la pestaña Actions, en cualquier rama.
+  workflow_dispatch:
+
+# Permisos mínimos: cada job pide solo lo que necesita.
+permissions: {}
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validar skill, manifiestos y evals
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Validar (formato, nombre, límites, enlaces, manifiestos, evals)
+        run: python3 scripts/validate.py
+
+      - name: Probar el propio validador
+        run: python3 -m unittest discover -s scripts -p "test_*.py" -v
+
+      - name: Generar los zips
+        run: python3 scripts/build_zips.py --out dist
+
+  pr-title:
+    name: Título del PR en formato convencional
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Comprobar el título
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          pattern='^(feat|fix|docs|chore|refactor|test|ci|build|perf|style|revert)(\([a-z0-9._/-]+\))?!?: .+'
+          if [[ "$PR_TITLE" =~ $pattern ]]; then
+            echo "Título válido: $PR_TITLE"
+          else
+            echo "::error::El título del PR debe seguir el formato convencional, por ejemplo 'feat: añade modo reto', 'fix: corrige un falso amigo' o 'feat!: cambia los comandos'."
+            echo "Título recibido: $PR_TITLE"
+            exit 1
+          fi
+
+  secrets:
+    name: Buscar secretos (gitleaks)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      # gitleaks-action es gratis en cuentas personales. Si el repo pasa a una
+      # organización hace falta una licencia (secreto GITLEAKS_LICENSE).
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}

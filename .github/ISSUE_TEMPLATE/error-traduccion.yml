@@ -1,0 +1,70 @@
+name: Error de traducción o explicación
+description: Una traducción, una corrección o una explicación de inglés es incorrecta
+title: "Error: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por reportarlo! Los errores de traducción son la prioridad del proyecto.
+
+        **Importante:** no pegues conversaciones reales ni datos personales. Escribe un ejemplo inventado o anonimiza el tuyo.
+  - type: textarea
+    id: mensaje
+    attributes:
+      label: Mensaje de ejemplo
+      description: Lo que escribiste (inventado o anonimizado).
+      placeholder: "Ejemplo: «Estoy constipado y no puedo ir hoy.»"
+    validations:
+      required: true
+  - type: textarea
+    id: obtenido
+    attributes:
+      label: Lo que dijo el tutor
+      description: El bloque de inglés que recibiste, tal cual.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Lo que debería decir
+      description: La versión correcta y, si puedes, una fuente (diccionario, gramática).
+    validations:
+      required: true
+  - type: dropdown
+    id: gravedad
+    attributes:
+      label: Gravedad
+      options:
+        - Grave (información falsa, falso amigo mal explicado o corrección incorrecta)
+        - Menor (suena poco natural o falta un matiz)
+    validations:
+      required: true
+  - type: dropdown
+    id: capa
+    attributes:
+      label: Qué capa usabas
+      options:
+        - Instrucciones para Claude (capa 1)
+        - Skill (capa 2)
+        - Las dos
+        - No lo sé
+    validations:
+      required: true
+  - type: input
+    id: plataforma
+    attributes:
+      label: Plataforma y plan
+      placeholder: "web / escritorio / móvil / Claude Code · Free / Pro"
+  - type: input
+    id: version
+    attributes:
+      label: Versión del proyecto
+      placeholder: "0.1.0"
+  - type: checkboxes
+    id: privacidad
+    attributes:
+      label: Privacidad
+      options:
+        - label: No he pegado conversaciones reales ni datos personales.
+          required: true
