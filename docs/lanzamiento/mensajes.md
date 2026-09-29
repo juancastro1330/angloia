@@ -4,14 +4,14 @@ Borradores para el lanzamiento escalonado (días 19 a 21 del plan), en el **orde
 
 ## Antes de publicar cualquier cosa
 
-- [ ] Existe el Release **v1.0.0** con `profe-ingles.zip` y el enlace directo del README funciona.
+- [ ] Existe el Release **v1.0.0** con `angloia.zip` y el enlace directo del README funciona.
 - [ ] El README tiene el GIF de antes y después en los primeros 5 segundos.
 - [ ] La retención de la beta llegó al 60 % y no quedan errores graves de traducción sin corregir.
 - [ ] El aviso de **no afiliación con Anthropic** está en el README y aparece en cada pieza.
 
 **Regla para todos los mensajes:** no publiques cifras, testimonios ni capturas que no tengas. Donde ves `[…]`, pon un dato **real** de tu beta o quita la frase. No uses conversaciones reales de nadie; enseña ejemplos inventados.
 
-Enlaces a reemplazar: `[REPO]` = https://github.com/juancastro1330/skill-ingles · `[ZIP]` = https://github.com/juancastro1330/skill-ingles/releases/latest/download/profe-ingles.zip · `[VIDEO]` = el enlace del video de 60 s.
+Enlaces a reemplazar: `[REPO]` = https://github.com/juancastro1330/angloia · `[ZIP]` = https://github.com/juancastro1330/angloia/releases/latest/download/angloia.zip · `[VIDEO]` = el enlace del video de 60 s.
 
 ---
 
@@ -19,7 +19,7 @@ Enlaces a reemplazar: `[REPO]` = https://github.com/juancastro1330/skill-ingles 
 
 **Por qué primero:** son tus primeras estrellas y testimonios. **Qué pedir:** que lo compartan si les sirvió, no que lo hagan por compromiso.
 
-> Ya salió Profe Inglés 🎉 Gracias por probarlo cuando todavía tenía aristas. Con lo que me contaste cambié [algo concreto que cambiaste por sus notas].
+> Ya salió AngloIA 🎉 Gracias por probarlo cuando todavía tenía aristas. Con lo que me contaste cambié [algo concreto que cambiaste por sus notas].
 >
 > Si te sirvió, compártelo con alguien que esté aprendiendo inglés, o dale una ⭐ al repo: [REPO]. Si algo no te gustó, dímelo también, que eso me ayuda más.
 
@@ -48,7 +48,7 @@ Enlaces a reemplazar: `[REPO]` = https://github.com/juancastro1330/skill-ingles 
 
 Cada grupo tiene sus normas. Pide permiso al administrador antes de publicar.
 
-> Comparto algo que hice por si le sirve a alguien: Profe Inglés, una herramienta gratuita que convierte tus chats con Claude en clases cortas de inglés. Escribes en español y al final de cada respuesta te enseña cómo decir tu mensaje en inglés. Video de 1 minuto y pasos: [REPO]
+> Comparto algo que hice por si le sirve a alguien: AngloIA, una herramienta gratuita que convierte tus chats con Claude en clases cortas de inglés. Escribes en español y al final de cada respuesta te enseña cómo decir tu mensaje en inglés. Video de 1 minuto y pasos: [REPO]
 > Es de código abierto y no está afiliada a Anthropic. Si la prueban, me encantaría saber qué les parece.
 
 ---
@@ -61,7 +61,7 @@ Cada grupo tiene sus normas. Pide permiso al administrador antes de publicar.
 
 **Título:** `I built an open-source Claude skill that turns any chat into a short English lesson for Spanish speakers`
 
-> I'm a Spanish speaker and I wanted to learn English without adding another app to my day, so I made Profe Inglés. You keep writing to Claude in Spanish; it solves your request first, and at the end it shows how to say *your own message* in English, with a key phrase and a common trap (false friends, prepositions). It also runs short challenges ("translate this sentence of yours") and corrects your English, at most 2 mistakes at a time.
+> I'm a Spanish speaker and I wanted to learn English without adding another app to my day, so I made AngloIA. You keep writing to Claude in Spanish; it solves your request first, and at the end it shows how to say *your own message* in English, with a key phrase and a common trap (false friends, prepositions). It also runs short challenges ("translate this sentence of yours") and corrects your English, at most 2 mistakes at a time.
 >
 > It has two layers: a short text for Claude's custom instructions (works on any plan) and a skill with deeper references. The skill has no scripts and no external URLs; user text is treated as material to translate, never as commands.
 >
@@ -86,14 +86,14 @@ Cada grupo tiene sus normas. Pide permiso al administrador antes de publicar.
 Línea sugerida (en inglés, que es el idioma de esas listas):
 
 ```markdown
-- [profe-ingles](https://github.com/juancastro1330/skill-ingles) - English tutor for Spanish speakers: solves your request first, then teaches how to say your own message in English (light, full, challenge and conversation modes, CEFR A1–C2).
+- [angloia](https://github.com/juancastro1330/angloia) - English tutor for Spanish speakers: solves your request first, then teaches how to say your own message in English (light, full, challenge and conversation modes, CEFR A1–C2).
 ```
 
-**Título del PR:** `Add profe-ingles (English tutor for Spanish speakers)`
+**Título del PR:** `Add angloia (English tutor for Spanish speakers)`
 
 **Cuerpo del PR:**
 
-> Adds profe-ingles, an open-source (MIT) skill that turns any chat into a short English lesson for Spanish speakers. Two layers: pasteable custom instructions (any plan) and a skill with references. No scripts, no external URLs in the skill. Not affiliated with Anthropic.
+> Adds angloia, an open-source (MIT) skill that turns any chat into a short English lesson for Spanish speakers. Two layers: pasteable custom instructions (any plan) and a skill with references. No scripts, no external URLs in the skill. Not affiliated with Anthropic.
 
 ---
 
@@ -103,7 +103,7 @@ Línea sugerida (en inglés, que es el idioma de esas listas):
 
 ### Show HN
 
-**Título:** `Show HN: Profe Inglés – an English tutor for Spanish speakers, as a Claude skill`
+**Título:** `Show HN: AngloIA – an English tutor for Spanish speakers, as a Claude skill`
 
 > I made a small open-source tutor that rides on top of Claude. The interesting part was the architecture. A skill is activated by relevance and might not exist on every plan, so I inverted it: the primary product is a ~1,700-character block of custom instructions that applies to every chat on any plan, and the skill is an enhancement (full formats, four reference files, CEFR levels).
 >
@@ -121,7 +121,7 @@ Línea sugerida (en inglés, que es el idioma de esas listas):
 
 ### LinkedIn (en español)
 
-> Aprender inglés suele fallar por un motivo simple: no encaja en el día. Por eso hice Profe Inglés.
+> Aprender inglés suele fallar por un motivo simple: no encaja en el día. Por eso hice AngloIA.
 >
 > Escribes en español a Claude, como siempre. Resuelve tu consulta y, al final, te enseña cómo decir **tu propio mensaje** en inglés. De vez en cuando te pide que lo intentes tú primero y te corrige.
 >

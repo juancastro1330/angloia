@@ -1,8 +1,10 @@
-# 🇺🇸 Profe Inglés (English tutor for Spanish speakers)
+# 🇺🇸 AngloIA (English tutor for Spanish speakers)
 
 **Learn English while you use Claude for everything else.** You write in Spanish, as usual. Claude solves your request and, at the end, teaches you how to say your own message in English.
 
-[![CI](https://github.com/juancastro1330/skill-ingles/actions/workflows/ci.yml/badge.svg)](https://github.com/juancastro1330/skill-ingles/actions/workflows/ci.yml)
+*AngloIA = "Anglo" (English) + "IA", the Spanish acronym for AI.*
+
+[![CI](https://github.com/juancastro1330/angloia/actions/workflows/ci.yml/badge.svg)](https://github.com/juancastro1330/angloia/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Versión en español](README.md)
@@ -26,7 +28,7 @@ The tutor's notes are written in Spanish on purpose: the audience is Spanish spe
 | Layer | What it is | For whom |
 |---|---|---|
 | **1. Instructions for Claude** | A short text you paste once into your account. It applies to **every** chat | Everyone. The recommended way to start |
-| **2. The `profe-ingles` skill** | Adds the full format, the modes and 4 deep references (false friends, prepositions, tenses and levels) | Anyone who wants the best quality |
+| **2. The `angloia` skill** | Adds the full format, the modes and 4 deep references (false friends, prepositions, tenses and levels) | Anyone who wants the best quality |
 
 The skill improves the result but is **not required**: the instructions make sure the tutor always acts.
 
@@ -35,14 +37,14 @@ The skill improves the result but is **not required**: the instructions make sur
 | Platform | How to install |
 |---|---|
 | **Any plan (recommended to start)** | Paste the text from [`instrucciones/instrucciones-claude.md`](instrucciones/instrucciones-claude.md) into "Instructions for Claude" |
-| **claude.ai web and desktop** | Download [`profe-ingles.zip`](https://github.com/juancastro1330/skill-ingles/releases/latest/download/profe-ingles.zip) from the latest Release and upload it in the Skills section (code execution must be enabled) |
+| **claude.ai web and desktop** | Download [`angloia.zip`](https://github.com/juancastro1330/angloia/releases/latest/download/angloia.zip) from the latest Release and upload it in the Skills section (code execution must be enabled) |
 | **Mobile apps** | They use whatever is installed on your account |
-| **Claude Code** | `/plugin marketplace add juancastro1330/skill-ingles` and then `/plugin install profe-ingles@profe-ingles` |
+| **Claude Code** | `/plugin marketplace add juancastro1330/angloia` and then `/plugin install angloia@angloia` |
 | **Official directory** | Install it from Claude's directory once the plugin is approved (it updates itself) |
 
 > Does your free plan show the Skills section? The official documentation is not fully clear and it depends on your account. If you don't see it, use the instructions: they work the same on any plan.
 
-`profe-ingles` is the name of the skill and the plugin; the repository is called `skill-ingles`.
+`angloia` is the name of the skill, the plugin and the repository.
 
 ## How to use it
 
@@ -83,7 +85,7 @@ Contributions are welcome: new false friends, examples, test cases and fixes. St
 ```bash
 python3 scripts/validate.py                                  # validate the skill, manifests and evals
 python3 -m unittest discover -s scripts -p "test_*.py" -v    # test the validator
-python3 scripts/build_zips.py                                # build dist/profe-ingles.zip and dist/profe-ingles-plugin.zip
+python3 scripts/build_zips.py                                # build dist/angloia.zip and dist/angloia-plugin.zip
 ```
 
 ## License and notice

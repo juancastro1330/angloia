@@ -4,8 +4,8 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 
 ## Día 1: nombre, repo y plataforma
 
-- [ ] Verificar que **`profe-ingles`** esté libre en GitHub, en redes (TikTok, X, Instagram) y como dominio. Es irreversible: si está ocupado, elige otro **antes** de publicar y avisa para renombrar la skill, el plugin y los manifiestos.
-- [ ] El repositorio ya existe (`juancastro1330/skill-ingles`). Comprobar que es **público** y tiene licencia MIT.
+- [ ] Verificar que **`angloia`** esté libre en redes (TikTok, X, Instagram) y como dominio. Es irreversible: si está ocupado, elige otro **antes** de publicar. Ya se comprobó que en GitHub no existen repos ni cuentas con ese nombre, y que `angloia.com`, `.ai`, `.app`, `.es`, `.io`, `.org` y `.net` no tienen registro DNS; eso sugiere que no están en uso, pero **confirma la disponibilidad en un registrador** antes de comprar. Ojo: «Anglo» es un prefijo muy usado por academias de inglés en México; revisa que no genere confusión con una de ellas.
+- [ ] El repositorio ya existe (`juancastro1330/angloia`). Comprobar que es **público** y tiene licencia MIT.
 - [ ] Confirmar que la **rama por defecto es `main`** (Settings → Branches). Si el primer push fue a otra rama, cámbiala aquí o renombra la rama.
 - [ ] Settings → Actions → General → Workflow permissions: activar **«Allow GitHub Actions to create and approve pull requests»**. Sin esto, release-please no puede abrir el Release PR.
 - [ ] En tu cuenta de Claude: mirar en Configuración si tu plan muestra **Skills** y activar la ejecución de código. Anotar el resultado en [`compatibilidad.md`](compatibilidad.md). Así sabrás qué capa puedes probar.
@@ -20,8 +20,8 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 ## Día 4: instalar la skill
 
 - [ ] Generar los zips: `python3 scripts/build_zips.py` (o bajarlos del primer Release).
-- [ ] Subir `dist/profe-ingles.zip` en claude.ai (Skills). Comprobar que aparece y se activa en un chat.
-- [ ] Si usas Claude Code: `/plugin marketplace add juancastro1330/skill-ingles` y `/plugin install profe-ingles@profe-ingles`.
+- [ ] Subir `dist/angloia.zip` en claude.ai (Skills). Comprobar que aparece y se activa en un chat.
+- [ ] Si usas Claude Code: `/plugin marketplace add juancastro1330/angloia` y `/plugin install angloia@angloia`.
 
 ## Días 5 a 7: usarlo a diario
 
@@ -66,7 +66,7 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 **Día 18**
 
 - [ ] Para publicar la versión 1.0.0, incluye `Release-As: 1.0.0` al final del mensaje de un commit que llegue a `main` (release-please lo respeta). Después fusiona el **Release PR**.
-- [ ] Comprobar que el Release trae `profe-ingles.zip` y `profe-ingles-plugin.zip`, y que el enlace directo del README funciona.
+- [ ] Comprobar que el Release trae `angloia.zip` y `angloia-plugin.zip`, y que el enlace directo del README funciona.
 - [ ] Enviar el plugin al directorio de Anthropic siguiendo la guía oficial vigente.
 
 **Días 19 a 21: lanzamiento escalonado** (mensajes por canal en [`lanzamiento/mensajes.md`](lanzamiento/mensajes.md))

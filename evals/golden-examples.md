@@ -1,6 +1,6 @@
 # Ejemplos de referencia (30)
 
-Cada ejemplo muestra un mensaje y el comportamiento esperado de Profe Inglés. **Todos están inventados: nunca se usan conversaciones reales** (ni de beta testers ni de nadie).
+Cada ejemplo muestra un mensaje y el comportamiento esperado de AngloIA. **Todos están inventados: nunca se usan conversaciones reales** (ni de beta testers ni de nadie).
 
 ## Cómo usarlos
 

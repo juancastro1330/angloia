@@ -1,6 +1,6 @@
 # Guía para beta testers (1 página)
 
-¡Gracias por probar **Profe Inglés**! Es una herramienta para aprender inglés mientras usas Claude para lo de siempre. Solo te pedimos usarla una semana y contarnos con sinceridad cómo te fue.
+¡Gracias por probar **AngloIA**! Es una herramienta para aprender inglés mientras usas Claude para lo de siempre. Solo te pedimos usarla una semana y contarnos con sinceridad cómo te fue.
 
 ## Qué hace
 

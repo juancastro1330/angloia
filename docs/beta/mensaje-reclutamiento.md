@@ -23,7 +23,7 @@ Empieza por amigos, compañeros y comunidades donde aprenden inglés. Pide a cad
 >
 > Hola [nombre],
 >
-> Estoy terminando **Profe Inglés**, un proyecto de código abierto para aprender inglés mientras usas Claude para lo de siempre. Escribes en español, Claude resuelve tu consulta y, al final, te enseña cómo decir tu propio mensaje en inglés. De vez en cuando te pide que lo intentes tú primero.
+> Estoy terminando **AngloIA**, un proyecto de código abierto para aprender inglés mientras usas Claude para lo de siempre. Escribes en español, Claude resuelve tu consulta y, al final, te enseña cómo decir tu propio mensaje en inglés. De vez en cuando te pide que lo intentes tú primero.
 >
 > Busco entre 5 y 10 personas para probarlo una semana antes de publicarlo. Te pido esto:
 >
@@ -60,7 +60,7 @@ Empieza por amigos, compañeros y comunidades donde aprenden inglés. Pide a cad
 
 ## Mensaje de check-in (día 3)
 
-> Hola [nombre], ¿cómo vas con Profe Inglés? Dos preguntas rápidas: ¿lo sigues usando? ¿Qué te molesta o qué te sobra? Con una frase me basta 🙏
+> Hola [nombre], ¿cómo vas con AngloIA? Dos preguntas rápidas: ¿lo sigues usando? ¿Qué te molesta o qué te sobra? Con una frase me basta 🙏
 
 ## Mensaje de cierre (día 7)
 

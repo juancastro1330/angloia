@@ -1,6 +1,6 @@
 # Guion del video de instalación (60 segundos)
 
-**Objetivo:** que una persona que no programa instale Profe Inglés viendo el video una sola vez.
+**Objetivo:** que una persona que no programa instale AngloIA viendo el video una sola vez.
 **Formato:** vertical (9:16), con la pantalla del navegador y subtítulos en español. Voz cercana y pausada.
 **Título:** «Aprende inglés mientras usas Claude (en 1 minuto)».
 

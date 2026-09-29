@@ -1,20 +1,20 @@
 {
-  "name": "profe-ingles",
+  "name": "angloia",
   "owner": {
     "name": "juancastro1330",
     "url": "https://github.com/juancastro1330"
   },
   "plugins": [
     {
-      "name": "profe-ingles",
-      "source": "./plugins/profe-ingles",
+      "name": "angloia",
+      "source": "./plugins/angloia",
       "description": "Tutor de inglés para hispanohablantes: resuelve tu consulta y, al final, te enseña cómo decir tu mensaje en inglés.",
       "version": "0.1.0",
       "author": {
         "name": "juancastro1330",
         "url": "https://github.com/juancastro1330"
       },
-      "homepage": "https://github.com/juancastro1330/skill-ingles",
+      "homepage": "https://github.com/juancastro1330/angloia",
       "license": "MIT",
       "keywords": [
         "english",
