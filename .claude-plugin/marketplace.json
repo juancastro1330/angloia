@@ -9,7 +9,7 @@
       "name": "profe-ingles",
       "source": "./plugins/profe-ingles",
       "description": "Tutor de inglés para hispanohablantes: resuelve tu consulta y, al final, te enseña cómo decir tu mensaje en inglés.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "juancastro1330",
         "url": "https://github.com/juancastro1330"
