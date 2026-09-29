@@ -1,6 +1,6 @@
 # Instrucciones para Claude (capa 1)
 
-Este es el producto principal de **Profe Inglés**: un texto corto que pegas una sola vez en tu cuenta y que convierte todos tus chats en clases de inglés breves. Funciona en cualquier plan, incluido el gratuito, y no necesita instalar nada más.
+Este es el producto principal de **AngloIA**: un texto corto que pegas una sola vez en tu cuenta y que convierte todos tus chats en clases de inglés breves. Funciona en cualquier plan, incluido el gratuito, y no necesita instalar nada más.
 
 ## Cómo instalarlo
 
@@ -38,5 +38,5 @@ Entiende mis regionalismos (español neutro de LatAm) sin corregirlos. Si recuer
 ## Notas para quien mantiene el proyecto
 
 - El bloque está limitado a 2.000 caracteres por `scripts/validate.py`. Es un tope prudente, no un dato oficial: el día 2 del plan hay que **pegarlo en la cuenta real** y confirmar que cabe.
-- Debe decir lo mismo que `plugins/profe-ingles/skills/profe-ingles/SKILL.md`. La skill lo amplía con ejemplos y referencias, pero los comandos y las reglas son los mismos.
+- Debe decir lo mismo que `plugins/angloia/skills/angloia/SKILL.md`. La skill lo amplía con ejemplos y referencias, pero los comandos y las reglas son los mismos.
 - Los comandos del texto (`modo completo`, `pausa inglés`…) se comprueban automáticamente contra la skill.

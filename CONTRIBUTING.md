@@ -1,6 +1,6 @@
 # Cómo contribuir
 
-¡Gracias por querer ayudar! Profe Inglés es un proyecto comunitario para hispanohablantes que aprenden inglés. Cualquier mejora cuenta: un falso amigo nuevo, un ejemplo, una corrección de redacción.
+¡Gracias por querer ayudar! AngloIA es un proyecto comunitario para hispanohablantes que aprenden inglés. Cualquier mejora cuenta: un falso amigo nuevo, un ejemplo, una corrección de redacción.
 
 ## Principios
 
@@ -11,7 +11,7 @@
 
 ## Qué puedes aportar
 
-- Falsos amigos nuevos en `plugins/profe-ingles/skills/profe-ingles/references/false-friends.md`, con su significado real y la forma correcta.
+- Falsos amigos nuevos en `plugins/angloia/skills/angloia/references/false-friends.md`, con su significado real y la forma correcta.
 - Ejemplos nuevos en `evals/golden-examples.md`, casos de activación en `evals/activation.md` y casos límite en `evals/edge-cases.md`.
 - Correcciones de traducción, ortografía o redacción.
 - Mejoras del validador y de sus pruebas.

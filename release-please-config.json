@@ -3,7 +3,7 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "package-name": "profe-ingles",
+      "package-name": "angloia",
       "changelog-path": "CHANGELOG.md",
       "include-component-in-tag": false,
       "bump-minor-pre-major": true,
@@ -11,7 +11,7 @@
       "extra-files": [
         {
           "type": "json",
-          "path": "plugins/profe-ingles/.claude-plugin/plugin.json",
+          "path": "plugins/angloia/.claude-plugin/plugin.json",
           "jsonpath": "$.version"
         },
         {

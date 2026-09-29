@@ -58,6 +58,6 @@ jobs:
           TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
         run: |
           gh release upload "$TAG_NAME" \
-            dist/profe-ingles.zip \
-            dist/profe-ingles-plugin.zip \
+            dist/angloia.zip \
+            dist/angloia-plugin.zip \
             --clobber

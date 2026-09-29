@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Valida el repositorio de Profe Inglés. Solo usa la librería estándar.
+"""Valida el repositorio de AngloIA. Solo usa la librería estándar.
 
 Cada comprobación devuelve una lista de errores (vacía si todo está bien).
 Código de salida: 0 si no hay errores, 1 si hay alguno.
@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 from typing import Callable
 
-SKILL_NAME = "profe-ingles"
+SKILL_NAME = "angloia"
 SKILL_REL = Path("plugins") / SKILL_NAME / "skills" / SKILL_NAME
 PLUGIN_REL = Path("plugins") / SKILL_NAME
 INSTRUCTIONS_REL = Path("instrucciones") / "instrucciones-claude.md"

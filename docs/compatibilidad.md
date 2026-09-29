@@ -14,7 +14,7 @@ Cómo probar cada celda: instala la capa, abre un chat nuevo y corre los 30 caso
 | Claude para escritorio | Por verificar | Por verificar | | |
 | App móvil (iOS) | Por verificar | Por verificar | | Usa lo instalado en la cuenta |
 | App móvil (Android) | Por verificar | Por verificar | | Usa lo instalado en la cuenta |
-| Claude Code | No aplica | Por verificar | | Vía `/plugin marketplace add juancastro1330/skill-ingles` |
+| Claude Code | No aplica | Por verificar | | Vía `/plugin marketplace add juancastro1330/angloia` |
 | Directorio oficial | No aplica | Pendiente de envío | | Tras el Release 1.0.0 |
 
 Valores posibles: **Funciona**, **Con limitaciones** (anota cuáles), **No funciona**, **Por verificar**.

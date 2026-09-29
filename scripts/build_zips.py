@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Genera los dos zips de cada release. Solo usa la librería estándar.
 
-    profe-ingles.zip         Para claude.ai (Skills). La carpeta de la skill va en la raíz del zip.
-    profe-ingles-plugin.zip  Para Claude Code y para enviar al directorio. El plugin va en la raíz del zip.
+    angloia.zip         Para claude.ai (Skills). La carpeta de la skill va en la raíz del zip.
+    angloia-plugin.zip  Para Claude Code y para enviar al directorio. El plugin va en la raíz del zip.
 
 Los zips son reproducibles: mismo contenido, mismo orden y fechas fijas, así que
 el mismo commit siempre produce los mismos bytes.
@@ -19,7 +19,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-NAME = "profe-ingles"
+NAME = "angloia"
 ROOT = Path(__file__).resolve().parent.parent
 PLUGIN_DIR = Path("plugins") / NAME
 FIXED_DATE = (2020, 1, 1, 0, 0, 0)

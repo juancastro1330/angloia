@@ -71,23 +71,23 @@ class TestValidRepo(RepoCase):
 
 class TestSkillFormat(RepoCase):
     def test_nombre_con_claude(self) -> None:
-        self.edit(SKILL_MD, lambda t: t.replace("name: profe-ingles", "name: profe-claude", 1))
+        self.edit(SKILL_MD, lambda t: t.replace("name: angloia", "name: angloia-claude", 1))
         self.assertFailsOnly("formato de SKILL.md", "claude")
 
     def test_nombre_no_coincide_con_la_carpeta(self) -> None:
-        self.edit(SKILL_MD, lambda t: t.replace("name: profe-ingles", "name: otro-nombre", 1))
+        self.edit(SKILL_MD, lambda t: t.replace("name: angloia", "name: otro-nombre", 1))
         self.assertFailsOnly("formato de SKILL.md", "debe coincidir con la carpeta")
 
     def test_nombre_con_mayusculas(self) -> None:
-        self.edit(SKILL_MD, lambda t: t.replace("name: profe-ingles", "name: Profe_Ingles", 1))
+        self.edit(SKILL_MD, lambda t: t.replace("name: angloia", "name: Anglo_IA", 1))
         self.assertFailsOnly("formato de SKILL.md", "minúsculas")
 
     def test_nombre_demasiado_largo(self) -> None:
-        self.edit(SKILL_MD, lambda t: t.replace("name: profe-ingles", "name: " + "a" * 65, 1))
+        self.edit(SKILL_MD, lambda t: t.replace("name: angloia", "name: " + "a" * 65, 1))
         self.assertFailsOnly("formato de SKILL.md", "máximo 64")
 
     def test_descripcion_demasiado_larga(self) -> None:
-        self.edit(SKILL_MD, lambda t: t.replace("---\n\n# Profe", "  " + "palabra " * 40 + "\n---\n\n# Profe", 1))
+        self.edit(SKILL_MD, lambda t: t.replace("---\n\n# AngloIA", "  " + "palabra " * 40 + "\n---\n\n# AngloIA", 1))
         self.assertFailsOnly("formato de SKILL.md", "máximo 1024")
 
     def test_descripcion_con_etiqueta_xml(self) -> None:
@@ -114,7 +114,7 @@ class TestSkillFormat(RepoCase):
         self.assertFailsOnly("formato de SKILL.md", "frontmatter")
 
     def test_clave_desconocida(self) -> None:
-        self.edit(SKILL_MD, lambda t: t.replace("name: profe-ingles\n", "name: profe-ingles\nfoo: bar\n", 1))
+        self.edit(SKILL_MD, lambda t: t.replace("name: angloia\n", "name: angloia\nfoo: bar\n", 1))
         self.assertFailsOnly("formato de SKILL.md", "claves no permitidas")
 
 
@@ -168,7 +168,7 @@ class TestManifests(RepoCase):
     def test_source_inexistente(self) -> None:
         self.edit(
             ".claude-plugin/marketplace.json",
-            lambda t: t.replace("./plugins/profe-ingles", "./plugins/otro"),
+            lambda t: t.replace("./plugins/angloia", "./plugins/otro"),
         )
         self.assertFailsOnly("manifiestos y versiones", "source")
 
@@ -257,12 +257,12 @@ class TestBuildZips(RepoCase):
         self.assertEqual(build_zips.verify(skill, plugin), [])
         with zipfile.ZipFile(skill) as zf:
             names = zf.namelist()
-        self.assertIn("profe-ingles/SKILL.md", names)
-        self.assertTrue(all(n.startswith("profe-ingles/") for n in names))
+        self.assertIn("angloia/SKILL.md", names)
+        self.assertTrue(all(n.startswith("angloia/") for n in names))
         self.assertEqual(len([n for n in names if "/references/" in n]), 4)
         with zipfile.ZipFile(plugin) as zf:
             manifest = json.loads(zf.read(".claude-plugin/plugin.json"))
-        self.assertEqual(manifest["name"], "profe-ingles")
+        self.assertEqual(manifest["name"], "angloia")
 
     def test_zips_reproducibles(self) -> None:
         first = self.build(Path(self._tmp.name) / "a")
@@ -279,7 +279,7 @@ class TestBuildZips(RepoCase):
         with zipfile.ZipFile(plugin, "w") as zf:
             zf.writestr("otra-cosa.txt", "x")
         errors = build_zips.verify(skill, plugin)
-        self.assertTrue(any("profe-ingles/SKILL.md" in e for e in errors))
+        self.assertTrue(any("angloia/SKILL.md" in e for e in errors))
         self.assertTrue(any("plugin.json" in e for e in errors))
 
 

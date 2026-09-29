@@ -3,8 +3,8 @@
 # Con la protección de `main` activada ("Require review from Code Owners"),
 # estos archivos exigen la aprobación del mantenedor.
 
-/plugins/profe-ingles/skills/**       @juancastro1330
-/plugins/profe-ingles/.claude-plugin/ @juancastro1330
+/plugins/angloia/skills/**       @juancastro1330
+/plugins/angloia/.claude-plugin/ @juancastro1330
 /instrucciones/                       @juancastro1330
 /.claude-plugin/                      @juancastro1330
 /.github/                             @juancastro1330
