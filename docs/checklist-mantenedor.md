@@ -5,11 +5,11 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 ## Día 1: nombre, repo y plataforma
 
 - [ ] Verificar que **`angloia`** esté libre en redes (TikTok, X, Instagram) y como dominio. Es irreversible: si está ocupado, elige otro **antes** de publicar. Ya se comprobó que en GitHub no existen repos ni cuentas con ese nombre, y que `angloia.com`, `.ai`, `.app`, `.es`, `.io`, `.org` y `.net` no tienen registro DNS; eso sugiere que no están en uso, pero **confirma la disponibilidad en un registrador** antes de comprar. Ojo: «Anglo» es un prefijo muy usado por academias de inglés en México; revisa que no genere confusión con una de ellas.
-- [ ] El repositorio ya existe (`juancastro1330/angloia`). Comprobar que es **público** y tiene licencia MIT.
-- [ ] Confirmar que la **rama por defecto es `main`** (Settings → Branches). Si el primer push fue a otra rama, cámbiala aquí o renombra la rama.
-- [ ] Settings → Actions → General → Workflow permissions: activar **«Allow GitHub Actions to create and approve pull requests»**. Sin esto, release-please no puede abrir el Release PR.
+- [x] El repositorio existe (`juancastro1330/angloia`), es **público** y tiene licencia MIT.
+- [x] La **rama por defecto es `main`** (Settings → General → Default branch).
+- [x] Settings → Actions → General → Workflow permissions: **«Allow GitHub Actions to create and approve pull requests»** activado. Comprobado: release-please ya abrió sus Release PR.
 - [ ] En tu cuenta de Claude: mirar en Configuración si tu plan muestra **Skills** y activar la ejecución de código. Anotar el resultado en [`compatibilidad.md`](compatibilidad.md). Así sabrás qué capa puedes probar.
-- [ ] Abrir un PR de prueba con un error (por ejemplo, un `name` con «claude») y comprobar que el CI **falla**, y que uno correcto **pasa**.
+- [x] Comprobar que el CI **pasa** con un PR correcto (lo hicieron el #11 y el #13). El caso con error (por ejemplo, un `name` con «claude») se cubre con las pruebas de `scripts/test_validate.py`; si quieres verlo también en GitHub, abre un PR de prueba con ese error.
 
 ## Día 2: probar las instrucciones
 
@@ -51,7 +51,7 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
   - Require status checks: `Validar skill, manifiestos y evals`, `Título del PR en formato convencional` y `Buscar secretos (gitleaks)`.
   - Do not allow bypassing the above settings (o permite el bypass solo a administradores; ver la nota de abajo).
 - [ ] Settings → General → Pull Requests: permitir solo **squash merge**, con el **título del PR** como mensaje del commit.
-- [ ] Settings → Code security: activar **Dependabot alerts** y **security updates**, y **Private vulnerability reporting** (lo usa [`SECURITY.md`](../SECURITY.md)).
+- [ ] Settings → **Advanced Security**: activar **Dependabot alerts**, **Dependabot security updates** y **Private vulnerability reporting** (lo usa [`SECURITY.md`](../SECURITY.md)). Pasos en [«Paso a paso»](#paso-a-paso-para-los-ajustes-del-repositorio).
 - [ ] Revisar `.github/CODEOWNERS`.
 - [ ] Crear el token para release-please (ver la nota de abajo).
 
@@ -59,8 +59,8 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 
 - [ ] Grabar el video de instalación de 60 s (guion en [`beta/guion-video-60s.md`](beta/guion-video-60s.md)) y el GIF de antes y después. Guardar el GIF como `docs/demo.gif` y ponerlo en el README (hay un comentario que marca el lugar).
 - [ ] Settings → General → Social preview: subir `docs/social-preview.png`.
-- [ ] Settings → General → Topics: `claude-skills`, `agent-skills`, `claude-code-plugin`, `english-learning`, `esl`, `spanish-speakers`, `cefr`, `language-learning`.
-- [ ] Activar **Discussions**.
+- [ ] En la página principal del repo, a la derecha, **About** → ⚙: escribir la **descripción** y los **topics** `claude-skills`, `agent-skills`, `claude-code-plugin`, `english-learning`, `esl`, `spanish-speakers`, `cefr`, `language-learning`.
+- [ ] Settings → General → Features: activar **Discussions**.
 - [x] Crear los 10 «good first issues» a partir de [`good-first-issues.md`](good-first-issues.md), con la etiqueta `good first issue`. Ya están creados (#1 a #10).
 
 **Día 18**
@@ -76,6 +76,42 @@ Todo lo que el plan asigna al mantenedor y que **no se puede hacer desde archivo
 - [ ] 3. r/ClaudeAI, r/EnglishLearning y r/languagelearning (demo y utilidad, sin spam).
 - [ ] 4. PRs a las 3 listas awesome-claude-skills (una línea de descripción).
 - [ ] 5. Show HN, X y LinkedIn (ángulo técnico: la arquitectura de dos capas).
+
+## Paso a paso para los ajustes del repositorio
+
+Estos ajustes solo se pueden hacer desde la web de GitHub, con tu sesión iniciada, en https://github.com/juancastro1330/angloia.
+
+### Descripción y topics (2 minutos)
+
+1. En la página principal del repositorio (pestaña **Code**), mira la columna de la derecha. Arriba está la caja **About**.
+2. Pulsa el engranaje ⚙ que está a la derecha de la palabra **About**. Se abre una ventana llamada «Edit repository details».
+3. En **Description**, pega este texto:
+
+   > Tutor de inglés para hispanohablantes: escribes en español, Claude resuelve tu consulta y al final te enseña cómo decir tu mensaje en inglés. Skill y plugin de código abierto para Claude.
+
+4. En **Topics**, haz clic en el cuadro, escribe un topic y pulsa **Enter**. Repite con cada uno: `claude-skills`, `agent-skills`, `claude-code-plugin`, `english-learning`, `esl`, `spanish-speakers`, `cefr`, `language-learning`. Los topics sirven para que la gente encuentre el repositorio al buscar en GitHub.
+5. Deja **Website** vacío por ahora y pulsa **Save changes**.
+
+### Private vulnerability reporting (1 minuto)
+
+Permite que alguien que encuentre un problema de seguridad te lo cuente en privado, sin publicarlo. [`SECURITY.md`](../SECURITY.md) ya manda a la gente a ese botón, pero no aparece hasta que lo activas.
+
+1. Ve a **Settings** (la última pestaña de la barra superior del repositorio).
+2. En el menú de la izquierda, dentro de «Security and quality», pulsa **Advanced Security**.
+3. Busca la línea **Private vulnerability reporting** y pulsa **Enable**.
+4. En la misma página, pulsa **Enable** también en **Dependabot alerts** y en **Dependabot security updates**. Avisan si una dependencia tiene un problema de seguridad; aquí solo aplican a las actions de GitHub.
+
+### Discussions (30 segundos)
+
+1. **Settings** → **General**.
+2. Baja hasta la sección **Features** y marca **Discussions**.
+
+### Imagen social (1 minuto)
+
+Es la imagen que sale cuando alguien comparte el enlace del repositorio.
+
+1. Abre `docs/social-preview.png` en el repositorio, pulsa el botón de descarga (⬇ «Download raw file») y guárdala en tu computadora.
+2. **Settings** → **General** → baja hasta **Social preview** → **Edit** → **Upload an image** y elige el archivo.
 
 ## Notas
 
